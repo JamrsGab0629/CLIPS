@@ -1,14 +1,11 @@
-(deftemplate human 
-(slot name)
-(slot age)
-(slot gender))
+(deftemplate person
+(slot name) (slot department))
 
-(deffacts human-facts
-(human (name "gabriel")
-(age 17)
-(gender male))
-)
+(defrule personification
 
-(defrule human-rule
+    (person(name ?n) (department "Compsci"))
+    =>
 
-)
+    (printout t "your are compsci" crlf))
+(deffacts fact-person
+(person (name "james")(department "Compsci")))
