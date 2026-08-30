@@ -57,20 +57,14 @@ Here's the simplified version — one clear, short rule per question:
 ## Planned Inference
 
 
-1. New data comes in → system identifies its type.
-2. Data has no category → system suggests a category.
-3. Requester's role doesn't match required access → system restricts access.
-4. External requester + confidential data → system denies access.
-5. Data is incomplete or duplicated → system flags it for correction.
-6. Records conflict → system sends it to admin for checking.
-7. Data is old and inactive → system suggests archiving.
-8. Data looks suspicious → system flags it automatically.
-9. Multiple urgent requests → system prioritizes the most urgent one.
-10. Recurring problem detected → system suggests the usual fix.
-11. Data stored in outdated tool → system recommends migrating it.
-12. Backup is overdue → system recommends doing a backup.
-13. Unauthorized access attempt → system denies access and logs it.
-14. Data fails accuracy check → system suggests reviewing it.
-15. Data had a past incident → system recommends closer monitoring.
-
+1. (Q3) Requester's role doesn't match required access → system recommends restricting access.
+2. (Q4) External requester + confidential data → system recommends denying access.
+3. (Q5) Data is incomplete or duplicated → system suggests flagging it for correction.
+4. (Q6) Records conflict → system recommends escalating to admin for checking.
+5. (Q7) Data is old and inactive → system suggests archiving.
+6. (Q8) Data looks suspicious → system recommends flagging it.
+7. (Q9) Multiple urgent requests → system suggests prioritizing the most urgent one.
+8. (Q12) Backup is overdue → system recommends doing a backup.
+9. (Q13) Unauthorized access attempt → system recommends denying access and logging it.
+10. (Q14) Data fails accuracy check → system suggests reviewing it.
 
