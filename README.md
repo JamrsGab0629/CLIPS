@@ -50,10 +50,8 @@ Each piece of data will have a **type**, a **clearance level** (who can see it),
 
 ---
 
-Here's an expanded set of **rule-based inferences** based sa lahat ng facts natin (mula sa 15 questions at updated Shape of the Data):
 
-## Planned Inference (Expanded Rules)
-
+## Planned Inference 
 1. IF data is incomplete **THEN** flag it and return for correction.
 2. IF requester's role is external **AND** data's clearance is confidential **THEN** deny access.
 3. IF requester's role is admin **AND** data's clearance is public or internal **THEN** grant access automatically.
