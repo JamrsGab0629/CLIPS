@@ -50,14 +50,24 @@ Each piece of data will have a **type**, a **clearance level** (who can see it),
 
 ---
 
-## 3. Planned Inference
+Here's an expanded set of **rule-based inferences** based sa lahat ng facts natin (mula sa 15 questions at updated Shape of the Data):
 
-The system will use **rule-based inference** — simple "if-then" rules based on the collected facts to make decisions or recommendations.
+## Planned Inference (Expanded Rules)
 
-**Examples:**
-- If data is incomplete → the system flags it for correction.
-- If an external user tries to access confidential data → the system denies the request.
-- If a file is more than 5 years old and no longer active → the system recommends archiving it.
-- If two records have conflicting information → the system sends it to an admin for checking.
+1. IF data is incomplete **THEN** flag it and return for correction.
+2. IF requester's role is external **AND** data's clearance is confidential **THEN** deny access.
+3. IF requester's role is admin **AND** data's clearance is public or internal **THEN** grant access automatically.
+4. IF data's age is more than 5 years **AND** status is not active **THEN** recommend archiving.
+5. IF two records have conflicting information **THEN** escalate to admin for manual verification.
+6. IF data is flagged as duplicate **THEN** remove or merge with the original record.
+7. IF backup schedule is missing or overdue **THEN** alert the IT admin to perform a backup.
+8. IF an unauthorized access attempt is detected **THEN** log the incident and notify the admin.
+9. IF data accuracy check fails **THEN** flag the record for review and correction.
+10. IF a data incident has occurred before on a record **THEN** mark it for closer monitoring.
+11. IF multiple requests come in at the same time **AND** one is marked urgent **THEN** prioritize the urgent request first.
+12. IF data is stored in an outdated tool/system **THEN** recommend migration to a current system.
+13. IF data has no assigned clearance level **THEN** default its access to "restricted" until reviewed.
+14. IF a record has passed its review date **THEN** trigger a re-validation process.
+15. IF access violation is detected repeatedly from the same requester **THEN** suspend that requester's access privileges.
 
-This approach was chosen because most decisions in information management (like granting access or checking data validity) usually follow clear rules that an IT professional already applies — making it easier to represent as simple if-then rules instead of using more complex statistical methods.
+
