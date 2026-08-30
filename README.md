@@ -51,7 +51,7 @@ Each piece of data will have a **type**, a **clearance level** (who can see it),
 
 
 
-## Planned Inference
+## Planned Inference (Deterministic Inference Engine.)
 
 
 1. (Q3) Requester's role doesn't match required access → system recommends restricting access.
@@ -64,4 +64,36 @@ Each piece of data will have a **type**, a **clearance level** (who can see it),
 8. (Q12) Backup is overdue → system recommends doing a backup.
 9. (Q13) Unauthorized access attempt → system recommends denying access and logging it.
 10. (Q14) Data fails accuracy check → system suggests reviewing it.
+
+
+### EXAMPLE RULES
+1. IF (Requester_Role ≠ Required_Clearance)
+   THEN Access = Restricted
+
+2. IF (Requester_Role = External) AND (Data_Clearance = Confidential)
+   THEN Access = Denied
+
+3. IF (Is_Complete = False) OR (Is_Duplicate = True)
+   THEN Data_Status = Flagged_For_Correction
+
+4. IF (Record1 ≠ Record2)
+   THEN Action = Escalate_To_Admin
+
+5. IF (Data_Age > 5 years) AND (Status = Inactive)
+   THEN Action = Recommend_Archive
+
+6. IF (Data_Suspicious = True)
+   THEN Data_Status = Flagged
+
+7. IF (Multiple_Requests = True) AND (Urgent = True)
+   THEN Priority = Highest
+
+8. IF (Backup_Overdue = True)
+   THEN Action = Recommend_Backup
+
+9. IF (Access_Attempt = Unauthorized)
+   THEN Access = Denied AND Log_Incident = True
+
+10. IF (Accuracy_Check = Failed)
+    THEN Data_Status = Flagged_For_Review
 
