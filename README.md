@@ -50,21 +50,27 @@ Each piece of data will have a **type**, a **clearance level** (who can see it),
 ---
 
 
-## Planned Inference 
-1. IF data is incomplete **THEN** flag it and return for correction.
-2. IF requester's role is external **AND** data's clearance is confidential **THEN** deny access.
-3. IF requester's role is admin **AND** data's clearance is public or internal **THEN** grant access automatically.
-4. IF data's age is more than 5 years **AND** status is not active **THEN** recommend archiving.
-5. IF two records have conflicting information **THEN** escalate to admin for manual verification.
-6. IF data is flagged as duplicate **THEN** remove or merge with the original record.
-7. IF backup schedule is missing or overdue **THEN** alert the IT admin to perform a backup.
-8. IF an unauthorized access attempt is detected **THEN** log the incident and notify the admin.
-9. IF data accuracy check fails **THEN** flag the record for review and correction.
-10. IF a data incident has occurred before on a record **THEN** mark it for closer monitoring.
-11. IF multiple requests come in at the same time **AND** one is marked urgent **THEN** prioritize the urgent request first.
-12. IF data is stored in an outdated tool/system **THEN** recommend migration to a current system.
-13. IF data has no assigned clearance level **THEN** default its access to "restricted" until reviewed.
-14. IF a record has passed its review date **THEN** trigger a re-validation process.
-15. IF access violation is detected repeatedly from the same requester **THEN** suspend that requester's access privileges.
+Here's the fully aligned version — now every one of the 15 questions maps to a rule:
 
+## Planned Inference
+
+The system will use rule-based inference — applying if-then rules based directly on the interview questions, to give recommendations to the user.
+
+**Rules based on the interview questions:**
+
+1. *(From Q1 - types of data handled)* If new data comes in → the system will **identify** its type (file, database record, log, or report).
+2. *(From Q2 - categorizing data)* If new data has no assigned category → the system will **suggest** a category based on its type.
+3. *(From Q3 - access control)* If a requester's role doesn't match the required clearance → the system will **recommend** restricting access.
+4. *(From Q4 - confidential data)* If a requester is external and the data is confidential → the system will **recommend** denying access.
+5. *(From Q5 - missing/duplicate/corrupted data)* If data is found incomplete or duplicated → the system will **suggest** flagging it for correction.
+6. *(From Q6 - conflicting records)* If two records don't match → the system will **recommend** escalating it to an admin for checking.
+7. *(From Q7 - outdated data)* If data is old and no longer active → the system will **suggest** archiving it.
+8. *(From Q8 - automated flagging)* If data looks suspicious or invalid → the system will **recommend** flagging it automatically.
+9. *(From Q9 - prioritizing tasks)* If there are multiple requests at once → the system will **suggest** prioritizing the most urgent one first.
+10. *(From Q10 - common problems)* If a recurring problem pattern is detected → the system will **recommend** the usual fix based on past cases.
+11. *(From Q11 - storage tools)* If data is being stored in an outdated tool → the system will **recommend** migrating it to a current system.
+12. *(From Q12 - backup frequency)* If a scheduled backup is overdue → the system will **recommend** performing a backup immediately.
+13. *(From Q13 - unauthorized access)* If someone tries to access data they're not allowed to → the system will **recommend** denying access and logging the attempt.
+14. *(From Q14 - data accuracy)* If data fails an accuracy check → the system will **suggest** reviewing and correcting it.
+15. *(From Q15 - past incidents)* If a record had a past data incident → the system will **recommend** monitoring it more closely.
 
