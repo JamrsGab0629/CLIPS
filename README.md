@@ -50,9 +50,6 @@ Each piece of data will have a **type**, a **clearance level** (who can see it),
 ---
 
 
-Here's the fully aligned version — now every one of the 15 questions maps to a rule:
-
-Here's the simplified version — one clear, short rule per question:
 
 ## Planned Inference
 
