@@ -26,6 +26,8 @@ Information Management (Tech-Based) — focuses on how IT systems store, secure,
 
 ---
 
+
+
 ## 2. Shape of the Data
 
 Based on the answers we expect to get, the information collected will be organized into the following facts, attributes, and possible values:
