@@ -6,7 +6,7 @@ Information Management (Tech-Based) — focuses on how IT systems store, secure,
 ---
 
 ## 1. Questions to the Expert
-
+dddd
 
 1. What kind of data do you usually handle at work? (like files, database records, logs)
 2. How do you decide where to put or how to categorize new data that comes in?
