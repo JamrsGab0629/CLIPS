@@ -1,4 +1,4 @@
-# Expert System: Information Management (Tech-Based)
+gwgwgsgag# Expert System: Information Management (Tech-Based)
 
 ## Domain
 Information Management (Tech-Based) — focuses on how IT systems store, secure, validate, and maintain digital data, based on the practices of IT professionals such as system admins or database administrators.
